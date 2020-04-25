@@ -5,6 +5,9 @@ ENDIF()
 
 SET (CHIBIOS_COMPONENTS nil rt hal pal serial)
 
+configure_file(${CHIBIOS_HALCONF_FILE} "halconf.h.dummy")
+configure_file(${CHIBIOS_CHCONF_FILE} "chconf.h.dummy")
+
 LIST(FIND ChibiOS_FIND_COMPONENTS nil ChibiOS_FIND_COMPONENTS_nil)
 LIST(FIND ChibiOS_FIND_COMPONENTS rt ChibiOS_FIND_COMPONENTS_rt)
 LIST(FIND ChibiOS_FIND_COMPONENTS hal ChibiOS_FIND_COMPONENTS_hal)
